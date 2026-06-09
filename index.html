@@ -3,125 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TheChosenMission - Donate</title>
-
+<title>TheChosenMission Donation</title>
 <style>
 body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
+    padding:0;
 }
-
-.hero{
-    background:url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=1200') center/cover;
-    height:250px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.hero h1{
-    color:white;
-    text-align:center;
-    background:rgba(0,0,0,.5);
-    padding:15px 25px;
-    border-radius:10px;
-}
-
 .container{
-    max-width:600px;
-    margin:-40px auto 40px;
+    max-width:500px;
+    margin:40px auto;
     background:white;
-    padding:25px;
+    padding:30px;
     border-radius:15px;
-    box-shadow:0 2px 15px rgba(0,0,0,.15);
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
 }
-
-h2{
+h1{
     text-align:center;
+    color:#333;
 }
-
-.amounts{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    margin:20px 0;
+p{
+    text-align:center;
+    color:#666;
 }
-
-.btn{
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+.donate-btn{
     display:block;
+    width:100%;
+    background:#0070ba;
+    color:white;
     text-decoration:none;
     text-align:center;
     padding:15px;
-    border-radius:10px;
+    border-radius:8px;
+    font-size:18px;
     font-weight:bold;
+}
+.donate-btn:hover{
     background:#005ea6;
-    color:white;
-}
-
-.paypal{
-    background:#0070ba;
-}
-
-.monthly{
-    background:#28a745;
-}
-
-.footer{
-    text-align:center;
-    margin-top:20px;
-    color:#666;
 }
 </style>
 </head>
-
 <body>
 
-<div class="hero">
-    <h1>TheChosenMission</h1>
-</div>
-
 <div class="container">
+    <h1>🙏 TheChosenMission</h1>
 
-<h2>Support Our Ministry</h2>
+    <p>
+        Thank you for supporting our mission.
+        Your generosity helps us spread the Gospel and serve others.
+    </p>
 
-<p style="text-align:center">
-Help us spread the Gospel of Jesus Christ around the world.
-Every donation helps us create faith-based content and reach more people.
-</p>
+    <input type="text" placeholder="Your Name">
 
-<div class="amounts">
+    <input type="email" placeholder="Your Email">
 
-<a class="btn paypal"
-href="https://www.paypal.me/TheChosenMission/25">
-Donate $25
-</a>
+    <textarea rows="5" placeholder="Message / Prayer Request"></textarea>
 
-<a class="btn paypal"
-href="https://www.paypal.me/TheChosenMission/100">
-Donate $100
-</a>
-
-<a class="btn paypal"
-href="https://www.paypal.me/TheChosenMission/500">
-Donate $500
-</a>
-
-<a class="btn paypal"
-href="https://www.paypal.me/TheChosenMission">
-Other Amount
-</a>
-
-</div>
-
-<a class="btn monthly"
-href="https://www.paypal.me/TheChosenMission">
-Monthly Donation
-</a>
-
-<div class="footer">
-🙏 Thank you for supporting TheChosenMission
-</div>
+    <a class="donate-btn"
+       href="https://paypal.me/TheChosenMission"
+       target="_blank">
+       ❤️ Donate Now
+    </a>
 
 </div>
 
