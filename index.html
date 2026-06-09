@@ -1,119 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TheChosenMission Donation</title>
+<title>SuperThanks Donation</title>
 
 <style>
 body{
-    font-family: Arial, sans-serif;
-    background:#f4f4f4;
-    margin:0;
-    padding:20px;
+    font-family: Arial;
+    background:#0f0f0f;
+    color:white;
+    display:flex;
+    justify-content:center;
 }
 
 .container{
-    max-width:600px;
-    margin:auto;
-    background:white;
-    padding:30px;
+    width:420px;
+    margin-top:30px;
+}
+
+.card{
+    background:#1c1c1c;
+    padding:20px;
     border-radius:15px;
-    box-shadow:0 0 15px rgba(0,0,0,0.15);
 }
 
-h1,h2{
-    text-align:center;
-    color:#333;
-}
-
-p{
-    text-align:center;
-    color:#666;
-}
-
-.amounts{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    justify-content:center;
-    margin-bottom:20px;
-}
-
-.amount-btn{
-    background:#28a745;
-    color:white;
-    padding:12px 18px;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-input, textarea{
+button{
     width:100%;
-    padding:12px;
-    margin-top:10px;
-    margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
-}
-
-.donate-btn{
-    display:block;
-    width:100%;
-    text-align:center;
-    text-decoration:none;
-    background:#0070ba;
-    color:white;
     padding:15px;
+    margin:5px 0;
+    border:none;
     border-radius:10px;
-    font-size:20px;
-    font-weight:bold;
 }
+
+.amount{ background:#333; color:white; }
+.pay{ background:gold; color:black; font-weight:bold; }
 </style>
+
 </head>
+
 <body>
 
 <div class="container">
 
-<h1>🙏 TheChosenMission</h1>
+<h2>Walk with us in faith</h2>
 
-<p>
-Thank you for supporting our mission.
-Your generosity helps us spread the Gospel and serve others.
-</p>
+<div class="card">
 
-<h2>❤️ One-Time Donation</h2>
+<input id="name" placeholder="Name" style="width:100%;padding:10px;">
+<input id="email" placeholder="Email" style="width:100%;padding:10px;margin-top:5px;">
 
-<div class="amounts">
-<div class="amount-btn">$25</div>
-<div class="amount-btn">$100</div>
-<div class="amount-btn">$500</div>
-<div class="amount-btn">Other Amount</div>
-</div>
+<button class="amount" onclick="setAmount(10)">$10</button>
+<button class="amount" onclick="setAmount(25)">$25</button>
+<button class="amount" onclick="setAmount(100)">$100</button>
+<button class="amount" onclick="setAmount(500)">$500</button>
 
-<h2>🌟 Monthly Membership</h2>
+<h3 id="selected">Selected: $25</h3>
 
-<div class="amounts">
-<div class="amount-btn">$10/month</div>
-<div class="amount-btn">$25/month</div>
-<div class="amount-btn">$75/month</div>
-<div class="amount-btn">$100/month</div>
-</div>
-
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Your Email">
-
-<textarea rows="5" placeholder="Message / Prayer Request"></textarea>
-
-<a class="donate-btn"
-href="https://paypal.me/TheChosenMission"
-target="_blank">
-❤️ Donate Now
-</a>
+<button class="pay" onclick="donate()">Donate with PayPal</button>
 
 </div>
+
+<h3>🔥 Live Leaderboard</h3>
+<div id="board"></div>
+
+</div>
+
+<script type="module" src="app.js"></script>
 
 </body>
 </html>
