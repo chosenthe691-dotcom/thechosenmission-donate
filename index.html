@@ -1,70 +1,225 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>SuperThanks Donation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TheChosenMission | Support Our Mission</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
 body{
-    font-family: Arial;
-    background:#0f0f0f;
-    color:white;
-    display:flex;
-    justify-content:center;
+background:#0c1633;
+color:white;
 }
 
 .container{
-    width:420px;
-    margin-top:30px;
+max-width:800px;
+margin:auto;
+padding:20px;
 }
 
-.card{
-    background:#1c1c1c;
-    padding:20px;
-    border-radius:15px;
+.hero{
+text-align:center;
+padding:50px 20px;
 }
 
-button{
-    width:100%;
-    padding:15px;
-    margin:5px 0;
-    border:none;
-    border-radius:10px;
+.hero h1{
+font-size:42px;
+color:#FFD700;
+margin-bottom:15px;
 }
 
-.amount{ background:#333; color:white; }
-.pay{ background:gold; color:black; font-weight:bold; }
+.hero p{
+font-size:18px;
+line-height:1.7;
+}
+
+.section{
+background:white;
+color:#222;
+padding:25px;
+border-radius:15px;
+margin-top:25px;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+.section h2{
+text-align:center;
+margin-bottom:20px;
+color:#0c1633;
+}
+
+.amounts{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:center;
+}
+
+.amounts a{
+background:#28a745;
+color:white;
+padding:15px 20px;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+.membership{
+background:#FFD700;
+color:#111;
+}
+
+input, textarea{
+width:100%;
+padding:14px;
+margin-top:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:16px;
+}
+
+.donate-btn{
+display:block;
+text-align:center;
+background:#0070ba;
+color:white;
+padding:18px;
+font-size:22px;
+font-weight:bold;
+border-radius:12px;
+text-decoration:none;
+margin-top:15px;
+}
+
+.payment{
+text-align:center;
+font-size:18px;
+line-height:2;
+}
+
+.goal{
+text-align:center;
+font-size:20px;
+}
+
+.footer{
+text-align:center;
+padding:40px 20px;
+line-height:2;
+}
 </style>
-
 </head>
-
 <body>
 
 <div class="container">
 
-<h2>Walk with us in faith</h2>
+<div class="hero">
+<h1>🙏 TheChosenMission</h1>
 
-<div class="card">
+<p>
+Thank you for supporting our mission.
+Your generosity helps us spread the Gospel and serve others around the world.
+</p>
+</div>
 
-<input id="name" placeholder="Name" style="width:100%;padding:10px;">
-<input id="email" placeholder="Email" style="width:100%;padding:10px;margin-top:5px;">
+<div class="section">
+<h2>❤️ One-Time Donation</h2>
 
-<button class="amount" onclick="setAmount(10)">$10</button>
-<button class="amount" onclick="setAmount(25)">$25</button>
-<button class="amount" onclick="setAmount(100)">$100</button>
-<button class="amount" onclick="setAmount(500)">$500</button>
+<div class="amounts">
+<a href="https://paypal.me/TheChosenMission" target="_blank">$25</a>
+<a href="https://paypal.me/TheChosenMission" target="_blank">$100</a>
+<a href="https://paypal.me/TheChosenMission" target="_blank">$500</a>
+<a href="https://paypal.me/TheChosenMission" target="_blank">Other Amount</a>
+</div>
+</div>
 
-<h3 id="selected">Selected: $25</h3>
+<div class="section">
+<h2>🌟 Monthly Membership</h2>
 
-<button class="pay" onclick="donate()">Donate with PayPal</button>
+<div class="amounts">
+<a class="membership" href="#">Bronze Partner<br>$10/month</a>
+
+<a class="membership" href="#">Silver Partner<br>$25/month</a>
+
+<a class="membership" href="#">Gold Partner<br>$75/month</a>
+
+<a class="membership" href="#">Kingdom Builder<br>$100/month</a>
+</div>
+</div>
+
+<div class="section">
+<h2>👤 Donor Information</h2>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Message / Prayer Request"></textarea>
+
+<a class="donate-btn"
+href="https://paypal.me/TheChosenMission"
+target="_blank">
+❤️ Donate Now
+</a>
+</div>
+
+<div class="section">
+<h2>💳 Secure Giving</h2>
+
+<div class="payment">
+✅ PayPal<br>
+✅ Debit Card<br>
+✅ Credit Card<br>
+✅ Apple Pay<br>
+✅ Google Pay
+</div>
+</div>
+
+<div class="section">
+<h2>📊 Mission Goal</h2>
+
+<div class="goal">
+Goal: $10,000<br><br>
+Raised: $2,350
+</div>
+</div>
+
+<div class="section">
+<h2>📖 Our Mission</h2>
+
+<p>
+TheChosenMission exists to spread the Gospel of Jesus Christ, disciple believers, and bring hope to people around the world through Biblical teaching, prayer, and outreach.
+</p>
+</div>
+
+<div class="footer">
+
+<h2>🎥 Follow TheChosenMission</h2>
+
+YouTube<br>
+Facebook<br>
+Instagram<br>
+Telegram
+
+<br><br>
+
+"Go into all the world and preach the gospel to all creation."
+
+<br>
+
+— Mark 16:15
 
 </div>
 
-<h3>🔥 Live Leaderboard</h3>
-<div id="board"></div>
-
 </div>
-
-<script type="module" src="app.js"></script>
 
 </body>
 </html>
